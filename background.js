@@ -5,10 +5,10 @@
 'use strict';
 
 function interceptRequest(request){
-	var redirectUrl = request.url.replace("www.reddit.com", "old.reddit.com");
+	var redirectUrl = request.url.replace(/(\/www\.reddit.com)|(\/reddit.com)/g, "/old.reddit.com");
 	return {
 		"redirectUrl": redirectUrl
 	}
 }
 
-chrome.webRequest.onBeforeRequest.addListener(interceptRequest, { urls: ['*://www.reddit.com/*'] }, ["blocking"]);
+chrome.webRequest.onBeforeRequest.addListener(interceptRequest, { urls: ['*://*.reddit.com/*', '*://reddit.com/*'] }, ["blocking"]);

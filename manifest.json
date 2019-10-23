@@ -5,7 +5,7 @@
 		"permissions": [
 			"webRequest",
 			"webRequestBlocking",			
-			"*://www.reddit.com/*"
+			"<all_urls>"
 		],
 		"background": {
       "scripts": ["background.js"],
