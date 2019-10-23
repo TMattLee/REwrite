@@ -1,2 +1,2 @@
 # REwrite
-Automatically redirect reddit urls to old.reddit.com
+Chrome extensions that automatically redirects reddit urls to old.reddit.com
